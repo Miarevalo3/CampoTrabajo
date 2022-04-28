@@ -13,12 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.User;
+import com.example.demo.repository.UserRepository;
 
-import co.edu.poli.mongodb.model.Customer;
-import co.edu.poli.mongodb.repository.CustomerRepository;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 @RestController // Defines that this class is a spring bean
 @RequestMapping("/api/v1/")
 public class UserController {
@@ -47,17 +43,18 @@ public class UserController {
 	}
 	
 	@PutMapping("/Users/{id}")
-	public User updateCustomer(@PathVariable String id, @RequestBody Customer customer) {
+	public User updateCustomer(@PathVariable String id, @RequestBody User user) {
 		
 		User _user = userRepository.findById(id).get();
 		
-		_user.setFirstname(customer.getFirstname());
-		_user.setLastname(customer.getLastname());
-		_user.setAddress(customer.getAddress());
-		_user.setAge(customer.getAge());
-		_user.setSalary(customer.getSalary());
-		_user.setMediosPago(customer.getMediosPago());
-		_user.setListaCompras(customer.getListaCompras());
+		_user.setName(user.getName());
+		_user.setLastname1(user.getLastname1());
+		_user.setLastname2(user.getLastname2());
+		_user.setJobOfferts(user.getJobOfferts());
+		_user.setMyForm(user.getMyForm());
+		_user.setPassword(user.getPassword());
+		_user.setPhone(user.getPhone());
+		_user.setRol(user.getRol());
 		
 		userRepository.save(_user);
 		
@@ -73,6 +70,6 @@ public class UserController {
 	
 	@DeleteMapping("/CustomersList")
 	public void deleteAll() {
-		customerRepository.deleteAll();
+		userRepository.deleteAll();
 	}
 }

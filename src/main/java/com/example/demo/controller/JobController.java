@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.model.Job;
 import com.example.demo.model.User;
+import com.example.demo.repository.JobRepository;
 
 @RestController // Defines that this class is a spring bean
 @RequestMapping("/api/v1/")
@@ -27,7 +29,7 @@ public class JobController {
 	}
 	
 	@GetMapping("/Jobs/{id}")
-	public User getJobByID(@PathVariable String id) {
+	public Job getJobByID(@PathVariable String id) {
 		return jobRepository.findById(id).get();
 	}
 	
@@ -46,13 +48,17 @@ public class JobController {
 		
 		Job _job = jobRepository.findById(id).get();
 		
-		_job.setFirstname(job.getFirstname());
-		_job.setLastname(job.getLastname());
-		_job.setAddress(job.getAddress());
-		_job.setAge(job.getAge());
+		_job.setLfAbleToRelocate(job.isLfAbleToRelocate());
+		_job.setLfExperience(job.getLfExperience());
+		_job.setLfSkills(job.getLfSkills());
+		_job.setLfStudies(job.getLfStudies());
+		_job.setLfWillingToCapacitate(job.isLfWillingToCapacitate());
+		_job.setNvacancies(job.getNvacancies());
+		_job.setOfertCapacitate(job.isOfertCapacitate());
+		_job.setOfertLivingPlace(job.isOfertLivingPlace());
+		_job.setOtherAdvantages(job.getOtherAdvantages());
 		_job.setSalary(job.getSalary());
-		_job.setMediosPago(job.getMediosPago());
-		_job.setListaCompras(job.getListaCompras());
+		_job.setUrgency(job.getUrgency());
 		
 		jobRepository.save(_job);
 		
@@ -60,8 +66,8 @@ public class JobController {
 	}
 	
 	@DeleteMapping("/Jobs/{id}")
-	public Jobs deleteCustomerById(@PathVariable String id) {
-		User _job = jobRepository.findById(id).get();
+	public Job deleteCustomerById(@PathVariable String id) {
+		Job _job = jobRepository.findById(id).get();
 		jobRepository.deleteById(id);
 		return _job;
 	}

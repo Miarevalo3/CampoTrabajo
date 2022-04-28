@@ -17,6 +17,7 @@ public class User {
 	private String Password;
 	private List<Job> JobOfferts;
 	private List<Form> MyForm;
+	
 	public User() {
 		
 	}
