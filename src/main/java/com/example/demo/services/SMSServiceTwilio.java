@@ -1,10 +1,14 @@
 package com.example.demo.services;
 
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.SMS;
+
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 
-import co.edu.poli.mail.model.SMS;
 
+@Service
 public class SMSServiceTwilio implements SMSService {
 	
 	// Find your Account Sid and Token at twilio.com/console
@@ -15,7 +19,7 @@ public class SMSServiceTwilio implements SMSService {
     public Message sendSMS(SMS sms) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
         Message message = Message.creator(
-                new com.twilio.type.PhoneNumber(sms.getPhoneNumberTo()),
+                new com.twilio.type.PhoneNumber(sms.getPhone()),
                 new com.twilio.type.PhoneNumber("+18596949603"),//The Twilio phone number
                 sms.getBody())
            .create();
