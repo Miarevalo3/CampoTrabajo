@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
 
+
 @RestController // Defines that this class is a spring bean
 @RequestMapping("/api/v1/")
 public class UserController {
