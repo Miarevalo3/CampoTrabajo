@@ -1,2 +1,0 @@
-# CampoTrabajo
- Aplicación web
