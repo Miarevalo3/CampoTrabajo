@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioSesionComponent } from './Componentes/inicio-sesion/inicio-sesion.component';
 import { RegistroUsuarioComponent } from './Componentes/registro-usuario/registro-usuario.component';
-import { PaginaPrincipalComponent } from './Modelos/pagina-principal/pagina-principal.component';
+import { PaginaPrincipalComponent } from './Componentes/pagina-principal/pagina-principal.component';
 
 @NgModule({
   declarations: [

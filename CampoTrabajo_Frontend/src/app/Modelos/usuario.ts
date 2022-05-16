@@ -1,8 +1,8 @@
 export class Usuario {
-     Name: String;
-	 Lastname1: String;
-	 Lastname2: String;
+     name: string;
+	 Lastname1: string;
+	 Lastname2: string;
 	 Phone: number;
-	 Rol: String;
-	 Password: String;
+	 Rol: string;
+	 Password: string ;
 }
