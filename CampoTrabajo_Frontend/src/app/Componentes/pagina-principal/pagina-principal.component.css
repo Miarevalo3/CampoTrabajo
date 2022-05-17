@@ -1,0 +1,38 @@
+body{
+    margin: 0 !important;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    background:yellow;
+    height:80px;
+    justify-content: space-between;
+}
+
+.imagen3{
+    width: 80px;
+    height:80px;
+    background-color: black;
+}
+.nav-text2{
+    line-height: 80px; 
+    background: blue;
+}
+.nav-text1{
+    background: blue;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand{
+    margin: 10px;
+
+}
+.nav-registro{
+    
+    margin: 10px;
+    
+}
+.nav-login{
+    margin: 10px;
+}
