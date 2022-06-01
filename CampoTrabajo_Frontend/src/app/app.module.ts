@@ -8,6 +8,7 @@ import { InicioSesionComponent } from './Componentes/inicio-sesion/inicio-sesion
 import { RegistroUsuarioComponent } from './Componentes/registro-usuario/registro-usuario.component';
 import { PaginaPrincipalComponent } from './Componentes/pagina-principal/pagina-principal.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { User } from "./user";
 
 export class Sms {
-    phone: user.phone;
+    phone: string;
     body: string;
 }

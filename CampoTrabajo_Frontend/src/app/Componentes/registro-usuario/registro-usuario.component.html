@@ -1,3 +1,4 @@
+
 <body>
     <header>
         <div class="head">
@@ -16,32 +17,55 @@
         
         <div class="body2">
             <div class="body3">
-                    
-                <div class="formulario">
-                    <div class="inputs">
-                        <p class="form-text">Nombre</p>
-                        <input class="casillas" type="text">
+                <form #myForm="ngForm">
+                    <div *ngIf="!submitted">
+                        <div class="formulario">
+                            <div class="inputs">
+                                <p class="form-text" for ="nombre">Nombre</p>
+                                <input class="casillas" type="text" id="name"
+                                [(ngModel)]="user.Name"
+                                name="nombre"
+                                (focusout)="existsPK(user.Name)"
+                                required>
+                            </div>
+                        <div class="inputs">
+                            <p class="form-text" for = "Lastname1">Primer apellido</p>
+                            <input class="casillas" type="text" id="name"
+                            [(ngModel)]="user.Lastname1"
+                            name="Lastname1"
+                            required>
+                        </div>
+                        <div class="inputs">
+                            <p class="form-text" for="Lastname2">Segundo apellido</p>
+                            <input class="casillas" type="text" id="name"
+                            [(ngModel)]="user.Lastname2"
+                            name="Lastname2"
+                            required>
+                        </div>
+                        <div class="inputs">
+                            <p class="form-text" for="Phone">Numero de celular</p>
+                            <input class="casillas" type="text" id="name"
+                            [(ngModel)]="user.Phone"
+                            name="Phone"
+                            required>
+                        </div>
+                        <div class="inputs">
+                            <p class="form-text" for="Password">contraseña</p>
+                            <input class="casillas" type="text" id="name"
+                            [(ngModel)]="user.Password"
+                            name="Password"
+                            required>
+                        </div>
+                        <div class="boton">
+                            <button [disabled]="isDisabled" (click)="saveUser()" class="Unirme">Unirme</button>
+                        </div>
                     </div>
-                <div class="inputs">
-                    <p class="form-text">Primer apellido</p>
-                    <input class="casillas" type="text">
-                </div>
-                <div class="inputs">
-                    <p class="form-text">Segundo apellido</p>
-                    <input class="casillas" type="text">
-                </div>
-                <div class="inputs">
-                    <p class="form-text">Numero de celular</p>
-                    <input class="casillas" type="text">
-                </div>
-                <div class="inputs">
-                    <p class="form-text">contraseña</p>
-                    <input class="casillas" type="text">
-                </div>
-                <div class="boton">
-                    <button class="Unirme">Unirme</button>
-                </div>
-            </div>
+                    </div>
+                    <div *ngIf="submitted">
+                        <h4>You submitted successfully!</h4>
+                        <button class="btn btn-success" (click)="newuser()">Add</button>
+                      </div>
+                </form>
             </div>
             <div class="img">
                 <img class="imagen2" src="./assets/imagenes/field.png"/>
@@ -69,3 +93,4 @@
         </div>
     </footer>
 </body>
+{{msgError}}

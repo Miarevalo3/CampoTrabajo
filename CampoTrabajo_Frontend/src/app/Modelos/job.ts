@@ -2,7 +2,7 @@ import * as internal from "stream";
 
 export class Job {
     LfExperience: number;
-    LfSkills: ;
+    LfSkills: string;
     LfStudies: string;
     LfWillingToCapacitate: boolean;
     LfAbleToRelocate: boolean;
