@@ -1,0 +1,86 @@
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100px;
+}
+.imagen1{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.body2{
+    display: flex;
+}
+.body3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imagen2{
+    width: 350px;
+    height: 350px;  
+}
+.img{
+     
+    display: flex;
+    align-items: center;
+    right: 400;
+}
+.encabezado{
+    margin: 0px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+.Unirme{
+    margin: 20px;
+    width: 100px;
+}
+.form-text{
+    margin: 0px;
+}
+.inputs{
+    margin: 8px;
+}
+.casillas{
+    width: 300px;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+}
+
+
+.imagen4{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+.navbar2{
+    display: flex;
+    justify-content: space-between;
+    height: 80;
+    align-items: center;
+}
+.txt{
+    width: 1250px;
+    text-align: center;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.pie{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}

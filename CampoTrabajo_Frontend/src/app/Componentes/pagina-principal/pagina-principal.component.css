@@ -93,3 +93,9 @@ body{
     flex-direction: column;
     height: auto;
 }
+
+.imagen1{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
