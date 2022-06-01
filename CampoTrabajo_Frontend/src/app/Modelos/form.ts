@@ -1,7 +1,7 @@
 export class Form {
     Experiente: string;
-    kills: ;
-    studies: string;
-    wilingToCapacitate: boolean;
-    ableToRelocate: boolean;
+    Skills: ;
+    Studies: string;
+    WilingToCapacitate: boolean;
+    AbleToRelocate: boolean;
 }
