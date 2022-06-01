@@ -5,6 +5,7 @@ import { PaginaPrincipalComponent } from './Componentes/pagina-principal/pagina-
 import { RegistroUsuarioComponent } from './Componentes/registro-usuario/registro-usuario.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
   {path: 'index', component: PaginaPrincipalComponent},
   {path: 'registro', component: RegistroUsuarioComponent},
   {path: 'login', component: InicioSesionComponent}

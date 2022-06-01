@@ -1,0 +1,95 @@
+body{
+    margin: 0 !important;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    
+    height:80px;
+    justify-content: space-between;
+}
+
+.imagen3{
+    width: 60px;
+    height:60px;
+    
+}
+.nav-text2{
+    line-height: 40px; 
+    display: flex;
+    align-items: center;
+}
+.nav-text1{ 
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-registro{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.nav-login{
+    margin-right: 10px;
+}
+
+.centro{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.bienvenida{
+    text-align: center;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.busqueda{
+    display: flex;
+    justify-content: space-between;
+}
+.form-busqueda{
+    width: 280px;
+}
+.contacto{
+    display: flex;
+}
+
+.imagen2{
+    width: 40px;
+    height: 40px;
+}
+
+.navbar2{
+    display: flex;
+    justify-content: space-between;
+    height: 80;
+    align-items: center;
+}
+.imagen5{
+    width: 60px;
+    height:60px;
+}
+
+.opciones{
+    display: flex;
+    justify-content: space-between;
+}
+.pie{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.txt{
+    width: 1250px;
+    text-align: center;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
