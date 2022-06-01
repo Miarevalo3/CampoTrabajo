@@ -12,7 +12,7 @@ public class User {
 	private String Name;
 	private String Lastname1;
 	private String Lastname2;
-	private int Phone;
+	private String Phone;
 	private String Rol;
 	private String Password;
 	private List<Job> JobOfferts;
@@ -21,7 +21,7 @@ public class User {
 	public User() {
 		
 	}
-	public User(String name, String lastname1, String lastname2, int phone, String rol, String password,
+	public User(String name, String lastname1, String lastname2, String phone, String rol, String password,
 			List<Job> jobOfferts, List<Form> myForm) {
 		super();
 		Name = name;
@@ -51,10 +51,10 @@ public class User {
 	public void setLastname2(String lastname2) {
 		Lastname2 = lastname2;
 	}
-	public int getPhone() {
+	public String getPhone() {
 		return Phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		Phone = phone;
 	}
 	public String getRol() {

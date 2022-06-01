@@ -4,18 +4,18 @@ public class SMS {
 	
 	User user = new User();
 	
-	private int phone = user.getPhone(); 
+	private String phone = user.getPhone(); 
 	private String body;
 	
 	public SMS () {
 		
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
