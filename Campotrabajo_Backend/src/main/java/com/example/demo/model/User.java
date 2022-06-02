@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  */
 @Document(collection = "Users")
-
 public class User {
 	
 	private String Name;
