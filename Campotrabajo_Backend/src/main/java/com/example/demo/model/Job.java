@@ -3,7 +3,11 @@ package com.example.demo.model;
 import java.util.Map;
 
 import org.springframework.data.mongodb.core.mapping.Document;
-
+/**
+ * clase que permite crear los trabajos disponibles en la plataforma
+ * @author Miller Luis
+ *
+ */
 @Document(collection = "Jobs")
 public class Job {
 	private int LfExperience;
@@ -17,11 +21,24 @@ public class Job {
 	private String OtherAdvantages;
 	private boolean OfertCapacitate;
 	private boolean OfertLivingPlace;
-	
+
 	public Job() {
 		
 	}
-
+/**
+ * constructor de job
+ * @param lfExperience experiencia que se busca en años
+ * @param lfSkills lista de habilidades que se prefieren para el trabajo
+ * @param lfStudies nivel de estudios que se requiere
+ * @param lfWillingToCapacitate indica si se busca a alguien que quiera capacitarse
+ * @param lfAbleToRelocate indica si se busca a alguien con disponibilidad de mudarse 
+ * @param urgency indica que tan urgente se necesita al trabajador
+ * @param salary muestra el salario ofrecido
+ * @param nvacancies numero de vacantes
+ * @param otherAdvantages otras ventajas ofrecidas
+ * @param ofertCapacitate si el trabajo ofrece capacitación gratuita
+ * @param ofertLivingPlace si el trabajo ofrece un lugar de vivienda
+ */
 	public Job(int lfExperience, Map<String, String> lfSkills, String lfStudies, boolean lfWillingToCapacitate,
 			boolean lfAbleToRelocate, String urgency, int salary, int nvacancies, String otherAdvantages,
 			boolean ofertCapacitate, boolean ofertLivingPlace) {

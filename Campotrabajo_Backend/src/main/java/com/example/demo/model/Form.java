@@ -4,7 +4,11 @@ import java.util.Map;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
+/**
+ * Form clase para los formularios de aplicación a un job
+ * @author Miller Luis
+ *
+ */
 public class Form {
 	
 	private int Experience;
@@ -16,6 +20,14 @@ public class Form {
 	public Form() {
 		
 	}
+/**
+ * constructor de form
+ * @param experience experiencia laboral
+ * @param skills lista de habilidades
+ * @param studies estudios 
+ * @param willingToCapacitate disponibilidad para recibir capacitación
+ * @param ableToRelocate dispinibilidad para mudarse a otro lugar
+ */
 
 	public Form(int experience, Map<String, String> skills, String studies, boolean willingToCapacitate,
 			boolean ableToRelocate) {
