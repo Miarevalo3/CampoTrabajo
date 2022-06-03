@@ -10,12 +10,15 @@
     </header>
     <div class="body">
         <img class="imagen2" src="./assets/imagenes/wheat.png"/>
-        <div class="formulario">
-            <p>Iniciar sesion</p>
-            <input class="celular" type="text">
-            <input class="contraseña" type="text">
-            <button class="comenzar">Comenzar</button>
+        <form (ngSubmit)="userlogin()">
+            
+            <div class="formulario">
+                <p>Iniciar sesion</p>
+                <input class="celular" type="text" id="Phone"name="Phone" [(ngModel)]="user.Phone">
+                <input class="contraseña" type="text" id="Password" name="Password" [(ngModel)]="user.Password">
+            <button type="submit" class="btn">Comenzar</button>
         </div>
+        </form>
         <img class="imagen3" src="./assets/imagenes/wheat.png"/>
     </div>
 

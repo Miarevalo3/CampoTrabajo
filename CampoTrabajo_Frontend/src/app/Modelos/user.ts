@@ -5,4 +5,6 @@ export class User {
 	 Phone: string;
 	 Rol: string;
 	 Password: string ;
+	 JobOfferts: Map<string,string>;
+	 MyForm: Map<string,string>;
 }

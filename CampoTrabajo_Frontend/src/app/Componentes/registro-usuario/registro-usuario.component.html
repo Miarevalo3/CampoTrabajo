@@ -1,25 +1,63 @@
-<div class="container">
-    <form (ngSubmit)="userRegister()">
+
+    <div id="con">
+        <div class="header">
+            <img class="imagen1" src="./assets/imagenes/campos.png"/>
+            <a href="#" class="titulo">CampoTrabajo</a>
+        </div>
+    <div class="cuerpo">
+        <div class="fondo">
+            <form (ngSubmit)="userRegister()">
         <div class="inputs">
-            <label for ="Name">Nombre</label>
+            <label for ="Name" class="info">Nombre</label>
             <input class="casillas" type="text" id="Name" name="Name" [(ngModel)]="user.Name">
         </div>
         <div class="inputs">
-            <label for = "Lastname1">Primer apellido</label>
+            <label for = "Lastname1"class="info">Primer apellido</label>
             <input class="casillas" type="text" id="Lastname1" name="Lastname1" [(ngModel)]="user.Lastname1">
         </div>
         <div class="inputs">
-            <label for="Lastname2">Segundo apellido</label>
+            <label for="Lastname2"class="info">Segundo apellido</label>
             <input class="casillas" type="text" id="Lastname2" name="Lastname2" [(ngModel)]="user.Lastname2">
         </div>
         <div class="inputs">
-            <label for="Phone">Numero de celular</label>
+            <label for="Phone"class="info">Numero de celular</label>
             <input class="casillas" type="text" id="Phone"name="Phone" [(ngModel)]="user.Phone">
         </div>
         <div class="inputs">
-            <label for="Password">contraseña</label>
+            <label for="Password"class="info">contraseña</label>
             <input class="casillas" type="text" id="Password" name="Password" [(ngModel)]="user.Password">
         </div>
-    <button type="submit" class="btn">Unirme</button>   
-    </form>
-</div>
+        <div class="btn">
+            <button type="submit" class="btn">Unirme</button>  
+        </div>
+         
+        </form>
+        <img class="imagen2" src="./assets/imagenes/field.png"/>
+        <div *ngIf="submitted">
+            <h4>Registro correcto</h4>
+            <a href="login">Iniciar sesion</a>
+          </div>
+        </div>
+        
+    </div>
+
+        <div class="footer">
+            <nav class="navbar2">
+                <div class="index">
+                    <img class="imagen5" src="./assets/imagenes/campos.png"/>
+                    <a href="#" class="navbar2-brand">CampoTrabajo</a>
+                </div>
+                
+                <a href="#" class="nav-contacto">Contacto</a>     
+                <a href="#" class="nav-login">Preguntas frecuentes</a>     
+                <a href="#" class="nav-login">Mas informacion sobre nosotros</a>
+                   
+              </nav>
+              <div class="pie">
+                  <p class="txt"> Somos un portal que se encarga de servir de intermediario entre campesinos desplazados por la violencia que buscan empleo y empleadores que necesitan mano de obra con 
+                      experiencia en ganadería, agricultura y otros oficios asociados con el campo</p>
+              </div>
+        </div> 
+    
+    </div>
+    

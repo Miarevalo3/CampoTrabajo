@@ -50,11 +50,19 @@
 .txt{
     width: 1250px;
     text-align: center;
+    position:absolute;
+    bottom: 0px;
+    height:10%;
 }
 .footer{
     display: flex;
     flex-direction: column;
     height: auto;
+    background-color: BDBCBC;
+    position:absolute;
+   bottom: 0px;
+   width:100%;
+   height:35%;
 }
 .pie{
     display: flex;

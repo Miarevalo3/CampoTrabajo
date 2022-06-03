@@ -1,65 +1,61 @@
-.head{
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+ }
+ #con {
+     display: flex;
+     flex-direction: column;
+    min-height:100%;
+    position:relative;
+  
+ }
+
+.header{
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
     align-items: center;
-    margin: auto;
-    height: 100px;
 }
 .imagen1{
     width: 80px;
     height: 80px;
-    margin: auto;
 }
-.body{
+
+.cuerpo{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    bottom: 0px;
+    
 }
-.body2{
+.fondo{
     display: flex;
-}
-.body3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.imagen2{
-    width: 350px;
-    height: 350px;  
-}
-.img{
-     
-    display: flex;
-    align-items: center;
-    right: 400;
-}
-.encabezado{
-    margin: 0px;
-}
-.formulario{
-    display: flex;
-    flex-direction: column;
-}
-.Unirme{
-    margin: 20px;
-    width: 100px;
-}
-.form-text{
-    margin: 0px;
 }
 .inputs{
-    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.info{
+    margin: 0;
 }
 .casillas{
-    width: 300px;
+    margin-bottom: 10px;
+    width: 400px;
 }
-.boton{
+.btn{
     display: flex;
     justify-content: center;
 }
+.imagen2{
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+}
 
-
-.imagen4{
+.imagen5{
     width: 80px;
     height: 80px;
     margin: auto;
@@ -73,14 +69,23 @@
 .txt{
     width: 1250px;
     text-align: center;
+    position:absolute;
+    bottom: 0px;
+    height:10%;
 }
 .footer{
     display: flex;
     flex-direction: column;
     height: auto;
+    position:absolute;
+   bottom: 0px;
+   width:100%;
+   height:40%;
+   background-color: BDBCBC;
 }
 .pie{
     display: flex;
     justify-content: center;
     align-items:flex-end;
+    
 }

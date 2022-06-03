@@ -9,8 +9,6 @@ import { UserServicesService } from 'src/app/Servicios/user-services.service';
 export class RegistroUsuarioComponent implements OnInit {
   user = new User();
   submitted = false;
-  msgError = '';
-  isDisabled = true; 
 
   constructor(private userservice: UserServicesService) { }
 
@@ -27,6 +25,7 @@ export class RegistroUsuarioComponent implements OnInit {
 	    Password: this.user.Password
     };
     this.userservice.registerUser(data).subscribe(data =>{
+      this.submitted = true;
       alert("Usuario registrado")
     },error=>alert("Error al registrar el usuario"));
 
