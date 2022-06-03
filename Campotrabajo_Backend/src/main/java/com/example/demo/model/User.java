@@ -1,21 +1,19 @@
 package com.example.demo.model;
 
 import java.util.List;
-import java.util.Map;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-/**
- * clase que describe los usuarios de la aplicación
- * @author Desktop
- *
- */
+
 @Document(collection = "Users")
 public class User {
+	
+	@Id
+	private String Phone;
 	
 	private String Name;
 	private String Lastname1;
 	private String Lastname2;
-	private String Phone;
 	private String Rol;
 	private String Password;
 	private List<Job> JobOfferts;
@@ -24,17 +22,6 @@ public class User {
 	public User() {
 		
 	}
-/**
- * constructor de la clase user
- * @param name nombre de usuario		
- * @param lastname1 primer apellido
- * @param lastname2 segundo apellido
- * @param phone telefono
- * @param rol rol que puede ser empleador o trabajador
- * @param password contraseña
- * @param jobOfferts ofertas de trabajo del usuario si tiene roll empleador
- * @param myForm formulario del usuario para aplicar a trabajos si tiene roll trabajador
- */
 	public User(String name, String lastname1, String lastname2, String phone, String rol, String password,
 			List<Job> jobOfferts, List<Form> myForm) {
 		super();

@@ -9,4 +9,6 @@ import com.example.demo.model.User;
  */
 public interface UserRepository extends MongoRepository<User, String>{
 
+	User findByPhone(String phone);
+
 }

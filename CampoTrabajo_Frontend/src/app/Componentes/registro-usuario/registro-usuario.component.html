@@ -1,96 +1,25 @@
-
-<body>
-    <header>
-        <div class="head">
-            <div class="cont">
-                <img class="imagen1" src="./assets/imagenes/campos.png"/>
-                <a href="#" class="navbar-brand">CampoTrabajo</a>
-            </div>
-            
+<div class="container">
+    <form (ngSubmit)="userRegister()">
+        <div class="inputs">
+            <label for ="Name">Nombre</label>
+            <input class="casillas" type="text" id="Name" name="Name" [(ngModel)]="user.Name">
         </div>
-    </header>
-
-    <div class="body">
-        <div class="encabezadodiv">
-            <h1 class="encabezado">Comencemos...al que madruga Dios le ayuda</h1>
+        <div class="inputs">
+            <label for = "Lastname1">Primer apellido</label>
+            <input class="casillas" type="text" id="Lastname1" name="Lastname1" [(ngModel)]="user.Lastname1">
         </div>
-        
-        <div class="body2">
-            <div class="body3">
-                <form #myForm="ngForm">
-                    <div *ngIf="!submitted">
-                        <div class="formulario">
-                            <div class="inputs">
-                                <p class="form-text" for ="nombre">Nombre</p>
-                                <input class="casillas" type="text" id="name"
-                                [(ngModel)]="user.Name"
-                                name="nombre"
-                                (focusout)="existsPK(user.Name)"
-                                required>
-                            </div>
-                        <div class="inputs">
-                            <p class="form-text" for = "Lastname1">Primer apellido</p>
-                            <input class="casillas" type="text" id="name"
-                            [(ngModel)]="user.Lastname1"
-                            name="Lastname1"
-                            required>
-                        </div>
-                        <div class="inputs">
-                            <p class="form-text" for="Lastname2">Segundo apellido</p>
-                            <input class="casillas" type="text" id="name"
-                            [(ngModel)]="user.Lastname2"
-                            name="Lastname2"
-                            required>
-                        </div>
-                        <div class="inputs">
-                            <p class="form-text" for="Phone">Numero de celular</p>
-                            <input class="casillas" type="text" id="name"
-                            [(ngModel)]="user.Phone"
-                            name="Phone"
-                            required>
-                        </div>
-                        <div class="inputs">
-                            <p class="form-text" for="Password">contraseña</p>
-                            <input class="casillas" type="text" id="name"
-                            [(ngModel)]="user.Password"
-                            name="Password"
-                            required>
-                        </div>
-                        <div class="boton">
-                            <button [disabled]="isDisabled" (click)="saveUser()" class="Unirme">Unirme</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div *ngIf="submitted">
-                        <h4>You submitted successfully!</h4>
-                        <button class="btn btn-success" (click)="newuser()">Add</button>
-                      </div>
-                </form>
-            </div>
-            <div class="img">
-                <img class="imagen2" src="./assets/imagenes/field.png"/>
-            </div>
+        <div class="inputs">
+            <label for="Lastname2">Segundo apellido</label>
+            <input class="casillas" type="text" id="Lastname2" name="Lastname2" [(ngModel)]="user.Lastname2">
         </div>
-    </div>
-
-    <footer>
-        <div class="footer">
-            <nav class="navbar2">
-                <div class="index">
-                    <img class="imagen4" src="./assets/imagenes/campos.png"/>
-                    <a href="#" class="navbar2-brand">CampoTrabajo</a>
-                </div>
-                
-                <a href="#" class="nav-contacto">Contacto</a>     
-                <a href="#" class="nav-login">Preguntas frecuentes</a>     
-                <a href="#" class="nav-login">Mas informacion sobre nosotros</a>
-                   
-              </nav>
-              <div class="pie">
-                  <p class="txt"> Somos un portal que se encarga de servir de intermediario entre campesinos desplazados por la violencia que buscan empleo y empleadores que necesitan mano de obra con 
-                      experiencia en ganadería, agricultura y otros oficios asociados con el campo</p>
-              </div>
+        <div class="inputs">
+            <label for="Phone">Numero de celular</label>
+            <input class="casillas" type="text" id="Phone"name="Phone" [(ngModel)]="user.Phone">
         </div>
-    </footer>
-</body>
-{{msgError}}
+        <div class="inputs">
+            <label for="Password">contraseña</label>
+            <input class="casillas" type="text" id="Password" name="Password" [(ngModel)]="user.Password">
+        </div>
+    <button type="submit" class="btn">Unirme</button>   
+    </form>
+</div>
