@@ -8,15 +8,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Users")
 public class User {
 	
-	private String Phone;
+	
 	
 	private String Name;
 	private String Lastname1;
 	private String Lastname2;
+	private String Phone;
 	private String Rol;
 	private String Password;
-	private List<Job> JobOfferts;
-	private List<Form> MyForm;
+	//private List<Job> JobOfferts;
+	//private List<Form> MyForm;
 	
 	public User() {
 		
@@ -30,8 +31,8 @@ public class User {
 		Phone = phone;
 		Rol = rol;
 		Password = password;
-		JobOfferts = jobOfferts;
-		MyForm = myForm;
+		//JobOfferts = jobOfferts;
+		//MyForm = myForm;
 	}
 	public String getName() {
 		return Name;
@@ -69,7 +70,7 @@ public class User {
 	public void setPassword(String password) {
 		Password = password;
 	}
-	public List<Job> getJobOfferts() {
+	/*public List<Job> getJobOfferts() {
 		return JobOfferts;
 	}
 	public void setJobOfferts(List<Job> jobOfferts) {
@@ -80,7 +81,7 @@ public class User {
 	}
 	public void setMyForm(List<Form> myForm) {
 		MyForm = myForm;
-	}
+	}*/
 
 
 	
